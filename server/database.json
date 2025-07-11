@@ -1,0 +1,41 @@
+{
+  "roles": [
+    {"id": 1, "name": "customer"},
+    {"id": 2, "name": "worker"}
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Cliente Ejemplo",
+      "email": "cliente@example.com",
+      "password": "cliente123",
+      "roleId": 1
+    },
+    {
+      "id": 2,
+      "name": "Trabajador Ejemplo",
+      "email": "trabajador@example.com",
+      "password": "trabajador123",
+      "roleId": 2
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "Firulais",
+      "type": "Perro",
+      "breed": "Labrador",
+      "userId": 1
+    }
+  ],
+  "stays": [
+    {
+      "id": 1,
+      "petId": 1,
+      "userId": 1,
+      "startDate": "2023-10-15",
+      "duration": 5,
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<section class="pets-view">
+  <div class="view-header">
+    <h1 data-i18n="pets_management">Gestión de Mascotas</h1>
+    <button id="add-pet" class="btn-primary" data-i18n="add_pet">+ Añadir mascota</button>
+  </div>
+  
+  <div class="cards-container" id="pets-container">
+    <!-- Las mascotas se cargarán dinámicamente aquí -->
+  </div>
+  
+  <div id="pet-form-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="pet-form-title" data-i18n="add_pet">Añadir mascota</h2>
+      <form id="pet-form">
+        <input type="hidden" id="pet-id">
+        
+        <div class="form-group">
+          <label for="pet-name" data-i18n="pet_name">Nombre</label>
+          <input type="text" id="pet-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="pet-type" data-i18n="pet_type">Tipo</label>
+          <select id="pet-type" required>
+            <option value="dog" data-i18n="dog">Perro</option>
+            <option value="cat" data-i18n="cat">Gato</option>
+            <option value="bird" data-i18n="bird">Pájaro</option>
+            <option value="other" data-i18n="other">Otro</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="pet-breed" data-i18n="breed">Raza</label>
+          <input type="text" id="pet-breed">
+        </div>
+        
+        <div class="form-group">
+          <label for="pet-age" data-i18n="age">Edad (años)</label>
+          <input type="number" id="pet-age" min="0" max="30">
+        </div>
+        
+        <button type="submit" class="btn-primary" data-i18n="save">Guardar</button>
+      </form>
+    </div>
+  </div>
+</section>

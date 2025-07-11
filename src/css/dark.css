@@ -1,0 +1,13 @@
+[data-theme="dark"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --text-primary: #e6e6e6;
+  --text-secondary: #b8b8b8;
+  --accent: #0f3460;
+  --border: #2d4059;
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+}

@@ -1,0 +1,62 @@
+<section class="users-view">
+  <div class="view-header">
+    <h1 data-i18n="users_management">Gestión de Usuarios</h1>
+    <button id="add-user" class="btn-primary" data-i18n="add_user">+ Añadir usuario</button>
+  </div>
+  
+  <div class="table-container">
+    <table id="users-table">
+      <thead>
+        <tr>
+          <th data-i18n="name">Nombre</th>
+          <th data-i18n="email">Email</th>
+          <th data-i18n="role">Rol</th>
+          <th data-i18n="actions">Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="users-list">
+        <!-- Los usuarios se cargarán dinámicamente aquí -->
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="user-form-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="user-form-title" data-i18n="add_user">Añadir usuario</h2>
+      <form id="user-form">
+        <input type="hidden" id="user-id">
+        
+        <div class="form-group">
+          <label for="user-name" data-i18n="full_name">Nombre completo</label>
+          <input type="text" id="user-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="user-email" data-i18n="email">Correo electrónico</label>
+          <input type="email" id="user-email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="user-role" data-i18n="role">Rol</label>
+          <select id="user-role" required>
+            <option value="1" data-i18n="customer">Cliente</option>
+            <option value="2" data-i18n="worker">Trabajador</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="user-password" data-i18n="password">Contraseña</label>
+          <input type="password" id="user-password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="user-confirm-password" data-i18n="confirm_password">Confirmar contraseña</label>
+          <input type="password" id="user-confirm-password" required>
+        </div>
+        
+        <button type="submit" class="btn-primary" data-i18n="save">Guardar</button>
+      </form>
+    </div>
+  </div>
+</section>

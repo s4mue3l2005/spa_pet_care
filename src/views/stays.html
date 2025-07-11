@@ -1,0 +1,53 @@
+<section class="stays-view">
+  <div class="view-header">
+    <h1 data-i18n="stays_management">Gestión de Estancias</h1>
+    <button id="add-stay" class="btn-primary" data-i18n="add_stay">+ Reservar estancia</button>
+  </div>
+  
+  <div class="filters">
+    <div class="filter-group">
+      <label for="status-filter" data-i18n="status">Estado:</label>
+      <select id="status-filter">
+        <option value="all" data-i18n="all">Todas</option>
+        <option value="active" data-i18n="active">Activas</option>
+        <option value="completed" data-i18n="completed">Completadas</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="cards-container" id="stays-container">
+    <!-- Las estancias se cargarán dinámicamente aquí -->
+  </div>
+  
+  <div id="stay-form-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="stay-form-title" data-i18n="add_stay">Reservar estancia</h2>
+      <form id="stay-form">
+        <input type="hidden" id="stay-id">
+        
+        <div class="form-group">
+          <label for="stay-pet" data-i18n="pet">Mascota</label>
+          <select id="stay-pet" required></select>
+        </div>
+        
+        <div class="form-group">
+          <label for="start-date" data-i18n="start_date">Fecha de inicio</label>
+          <input type="date" id="start-date" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="duration" data-i18n="duration_days">Duración (días)</label>
+          <input type="number" id="duration" min="1" max="30" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="special-notes" data-i18n="special_notes">Notas especiales</label>
+          <textarea id="special-notes" rows="3"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary" data-i18n="save">Guardar</button>
+      </form>
+    </div>
+  </div>
+</section>
